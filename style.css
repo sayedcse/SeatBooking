@@ -1,12 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* background-color: #171717; */
+/* background-color: #0b1215; */
+/* background-color: #011222; */
+/* background-color: #0d1717; */
+/* background-color: #020d19; */
+/* color: #fff9e3; */
+/* background-color: #fbf5df; */
+/* background-color: #f0f8ff; */
+/* background-color: #faf9f6; */
+/* background-color: #fbfcf8; */
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     font-family: 'Exo 2', 'sans-serif';
-    /* font-size: 1.25rem; */
+    font-size: 1.25rem;
+    color: #fff1e6;
+    background-color: #101220;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.movie-container {
+    margin: 1.25rem 0;
+}
+
+.movie-container select {
+    background-color: #fff1e6;
+    border: 0;
+    border-radius: 0.35rem;
+    font-size: 0.938rem;
+    margin-left: 0.625rem;
+    padding: 0.35rem 1rem 0.35rem 1rem;
+    appearance: none;
+}
+.container {
+    perspective: 62.5rem;
+    margin-bottom: 1.875rem;
+}
+.seat {
+    background-color: #5b4f68;
+    height: 1rem;
+    width: 1.188rem;
+    margin: 0.188rem;
+    /* border-top-left-radius: 625rem;
+    border-top-right-radius: 625rem; */
+    border-radius: 0.125rem;
+}
+.seat.selected {
+    background-color: #fbb060;
+}
+.seat.occupied {
+    background-color: #fff1e6;
+}
+.seat:nth-of-type(2) {
+    margin-right: 1.25rem;
+}
+.seat:nth-last-of-type(2) {
+    margin-left: 1.25rem;
+}
+.seat:not(.seat.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.showcase .seat:not(.seat.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+.showcase {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #5b4f68;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.625rem;
+}
+.showcase li small {
+    margin: 0.125rem;
+}
+.row {
+    display: flex;
+}
+.screen {
+    background-color: #fff1e6;
+    height: 70px;
+    width: 100%;
+    margin: 1rem 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 0.188rem 1rem rgba(255, 241, 230, 1);
+}
+
+p.text {
+    margin: 5px 0;
+}
+p.text span {
+    color: #fbb060;
 }
